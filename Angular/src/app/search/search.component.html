@@ -1,0 +1,76 @@
+
+<div class="row" style="margin-top: 10px;">
+  <div class="col-3">
+
+    <div class="list-group">
+      <a href="#" (click)="getAllPfe()"  onclick="charge()" class="list-group-item list-group-item-action d-flex justify-content-between  ">
+        Tous les PFEs<span class="badge bg-warning rounded-pill text-dark">{{pfes.length}}</span>
+      </a>
+
+      <a href="#"(click)="getPfeByType('Developpement')"   class="list-group-item list-group-item-action d-flex justify-content-between ">
+        Developpement
+        <span class="badge bg-info rounded-pill text-white">{{pfes.length}}</span>
+      </a>
+
+      <a href="#"(click)="getPfeByType('Réseau')" class="list-group-item list-group-item-action d-flex justify-content-between ">
+        PFEs Reseau
+        <span class="badge bg-info rounded-pill text-white">{{pfestype.length}}</span>
+      </a>
+      <a href="#"(click)="getPfeByType('Telecom')" class="list-group-item list-group-item-action d-flex justify-content-between ">
+        PFEs Telecom
+        <span class="badge bg-info rounded-pill text-white">{{pfestype.length}}</span>
+      </a>
+      <a  href="#"(click)="getPfeByType('Embarqués et IoT')"  onclick="embarques()" class="list-group-item list-group-item-action d-flex justify-content-between ">
+        PFEs Embarqués & IOT
+        <span class="badge bg-info rounded-pill text-white">{{pfestype.length}}</span>
+      </a>
+    </div>
+  </div>
+  <div class="col-9">
+
+
+    <section id="tabs" class="project-tab">
+      <div class="container">
+        <div class="card bg-success text-white">
+          <div class="card-header"><h5>Listes des PFEs</h5></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <table class="table bg-light" >
+                  <thead>
+                  <tr>
+                    <th width="40">ID</th>
+                    <th width="800">Titre</th>
+                    <th width="300">Type</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody id="tableBody" >
+                  <tr *ngFor="let pfe of pfestype | filter:searchKey:'titre'">
+
+                    <td>{{query.id}}</td>
+                    <td>{{query.title}}</td>
+                    <td>{{query.type}}</td>
+                    <td>
+                      <button class="btn btn-danger" (click)="deletePfe(pfe.id)">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+
+
+
+
+<div class="card">
+  <div class="card-header bg-primary text-white" >
+    <h1> Catalogue des PFEs ESSAT </h1>
+  </div>
+  <div class="card-body">
+    <div class="container-fluid">
+      <div>
+      <div class="btn-group" role="group" style="margin-top: 10px">
+      <a href="" routerLink="addpfe">
+        <button type="button" class="btn  rounded btn-outline-success" style="margin-left: 20px">AddPFE</button>
+      </a>
+
+
+      <div class="input-group">
+
+        <input #title   type="search" class="form-control rounded" style="margin-left: 20px" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <a href="" >
+        <button href="" routerLink="search" type="submit" class="btn btn-outline-primary" (click)="getPfeByTitle(title.value)"  style="margin-left: 20px">search</button>
+        </a>
+
+      </div>
+
+
+    </div>
+
+      </div>
+
+      <router-outlet></router-outlet>
+
+
+    </div>
+
+  </div>
+</div>
+
