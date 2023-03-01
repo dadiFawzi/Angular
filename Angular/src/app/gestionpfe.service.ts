@@ -13,7 +13,7 @@ export class GestionpfeService {
       return this.http.get("http://127.0.0.1:8080/pfe-projects")
 
   }
-  getPfeByType(type : string){
+  getPfeByType(type:string){
     return this.http.get("http://127.0.0.1:8080/pfe-projects/type/"+type)
   }
 

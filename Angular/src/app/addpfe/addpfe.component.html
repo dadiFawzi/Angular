@@ -4,26 +4,10 @@
 
     <div class="list-group">
       <a  href="#" (click)="getAllPfe()"  onclick="charge()" class="list-group-item list-group-item-action d-flex justify-content-between  ">
-        Tous les PFEs<span class="badge bg-warning rounded-pill text-dark"></span>
+        Tous les PFEs<span class="badge bg-warning rounded-pill text-dark">{{typesn[4]}}</span>
       </a>
 
-      <a href="#" (click)="getPfeByType('Developpement')"   class="list-group-item list-group-item-action d-flex justify-content-between ">
-        Pfes Developpement
-        <span class="badge bg-info rounded-pill text-white"></span>
-      </a>
 
-      <a href="#" (click)="getPfeByType('Réseau')" class="list-group-item list-group-item-action d-flex justify-content-between ">
-        PFEs Reseau
-        <span class="badge bg-info rounded-pill text-white"></span>
-      </a>
-      <a href="#" (click)="getPfeByType('Telecom')" class="list-group-item list-group-item-action d-flex justify-content-between ">
-        PFEs Telecom
-        <span class="badge bg-info rounded-pill text-white"></span>
-      </a>
-      <a  (click)="getPfeByType('Embarqués et IoT')" href="#" onclick="embarques()" class="list-group-item list-group-item-action d-flex justify-content-between ">
-        PFEs Embarqués & IOT
-        <span class="badge bg-info rounded-pill text-white"></span>
-      </a>
     </div>
   </div>
   <div class="col-md-9">

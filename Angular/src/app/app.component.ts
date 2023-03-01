@@ -7,6 +7,8 @@ import { GestionpfeService } from './gestionpfe.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+
   t:string="";
   title = 'GestionPfe';
   pfes :any
@@ -27,17 +29,7 @@ export class AppComponent {
       }
     )
   }
-  getPfeByTitle(title:string){
-    this.serv.getPfeByTitle(title).subscribe(
-      {
-        next: (data : any) => {this.pfes=data;this.pfestype=data;},
-        error: (err : any) => { console.log(err)},
-        complete: () => { }
-      }
 
-    )
-
-  }
 
 
 }

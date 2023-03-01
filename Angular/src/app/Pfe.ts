@@ -1,4 +1,4 @@
-export class Employee{
+export class Pfe{
   id: number;
   title: string;
   type: string ;
@@ -9,8 +9,5 @@ export class Employee{
     this.type= type ;
   }
 
-  constructor(title:string,type:string) {
-    this.title=title;
-    this.type=type;
-  }
+
 }
